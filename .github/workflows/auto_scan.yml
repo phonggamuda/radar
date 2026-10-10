@@ -1,0 +1,41 @@
+name: TopGit Radar Auto-Scan (Pure GitHub)
+
+on:
+  schedule:
+    # Chạy tự động lúc 23:00 UTC = 06:00 sáng giờ Việt Nam hàng ngày
+    - cron: '0 23 * * *'
+  workflow_dispatch: # Cho phép bấm nút "Run workflow" bất cứ lúc nào từ điện thoại/máy tính
+
+permissions:
+  contents: write
+
+jobs:
+  scan-and-update-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run Scanner & Generate Report
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python cron_scraper.py
+
+      - name: Commit & Push New Data Directly to GitHub
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "TopGit-Radar-Bot"
+          git add data.json BAO_CAO_HOM_NAY.md README.md index.html
+          git commit -m "Auto-update TopGit Radar scan [skip ci]" || exit 0
+          git push
