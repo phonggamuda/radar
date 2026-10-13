@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -34,8 +34,10 @@ jobs:
 
       - name: Commit & Push New Data Directly to GitHub
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "TopGit-Radar-Bot"
-          git add data.json BAO_CAO_HOM_NAY.md README.md index.html
-          git commit -m "Auto-update TopGit Radar scan [skip ci]" || exit 0
-          git push
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Auto-update TopGit Radar scan [skip ci]" || echo "No changes to commit"
+          # Tự động đồng bộ các thay đổi mới trên GitHub trước khi push để tránh lỗi [rejected] fetch first
+          git pull --rebase origin main || git pull --rebase -X theirs origin main
+          git push origin main
