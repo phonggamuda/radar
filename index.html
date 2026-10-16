@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TopGit Radar v4.0 - Phát Hiện Đột Biến Sao & Dịch Độc Bản</title>
+  <meta name="description" content="Công cụ theo dõi kho mã nguồn AI, so sánh biến động điểm sao 3 ngày và dịch thuật độc bản Tiếng Việt">
+  <meta name="theme-color" content="#0b0f19">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 500: '#0ea5e9', 600: '#0284c7', 900: '#0c4a6e' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar { display: none; }
+    .custom-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .touch-scroll { -webkit-overflow-scrolling: touch; }
+    .touch-card { transition: transform 0.15s ease, border-color 0.2s ease; }
+    .touch-card:active { transform: scale(0.99); }
+    @keyframes pulse-border {
+      0%, 100% { border-color: rgba(245, 158, 11, 0.7); }
+      50% { border-color: rgba(244, 63, 94, 0.9); }
+    }
+    .spike-card {
+      animation: pulse-border 2.5s infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen pb-24 selection:bg-sky-500 selection:text-white">
+
+  <!-- TOP APP BAR -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-3.5 py-2.5 shadow-lg">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-rose-500/20">
+            <i class="fa-solid fa-chart-line text-sm"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h1 class="text-sm sm:text-base font-bold text-white">TopGit Radar</h1>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">v4.0 So Sánh Sao</span>
+            </div>
+            <p id="totalStatsText" class="text-[11px] text-slate-400">Đang tải dữ liệu...</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+          <!-- Live Star Check Button -->
+          <button onclick="runLiveStarComparison()" id="btnLiveStarCheck" title="Quét và so sánh điểm sao thực tế ngay trên GitHub" class="px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-400 hover:to-rose-500 text-white text-xs font-bold shadow-md flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-bolt"></i> <span class="hidden sm:inline">So sánh Sao Live</span><span class="sm:hidden">So Sao</span>
+          </button>
+          <!-- Load File Button -->
+          <label title="Nạp file JSON từ máy" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium cursor-pointer border border-slate-700 flex items-center gap-1">
+            <i class="fa-solid fa-folder-open text-sky-400"></i> <span class="hidden sm:inline">Nạp JSON</span>
+            <input type="file" id="jsonFileInput" accept=".json" onchange="handleFileSelect(event)" class="hidden">
+          </label>
+          <!-- Theme Toggle -->
+          <button onclick="toggleTheme()" id="themeBtn" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center border border-slate-700">
+            <i class="fa-solid fa-sun text-xs text-amber-400"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- SEARCH & SORT ROW -->
+      <div class="mt-2.5 grid grid-cols-1 sm:grid-cols-12 gap-2">
+        <div class="sm:col-span-7 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="searchInput" oninput="onSearchInput()" placeholder="Tìm tên công cụ, chức năng tiếng Việt, từ khóa..." class="w-full pl-8 pr-8 py-1.5 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-500">
+          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+        </div>
+        <div class="sm:col-span-5 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-1.5 flex-1">
+            <span class="text-[11px] text-slate-400 whitespace-nowrap"><i class="fa-solid fa-sort text-sky-400"></i> Xếp:</span>
+            <select id="sortSelect" onchange="onSortChange()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-2.5 py-1.5 text-slate-100 text-xs font-semibold focus:outline-none focus:border-amber-500">
+              <option value="spike">🚀 Tăng sao đột biến mạnh nhất (Đáng chú ý)</option>
+              <option value="newest" selected>🔥 Mới quét nhất (Lên đầu)</option>
+              <option value="growth_pct">📈 Tốc độ tăng trưởng sao (%) cao nhất</option>
+              <option value="stars">⭐ Tổng điểm sao cao nhất</option>
+              <option value="ai">🤖 Ưu tiên AI (OpenAI &gt;&gt; Gemini &gt;&gt; Claude)</option>
+            </select>
+          </div>
+          <span id="filterResultCount" class="text-[11px] text-slate-400 font-semibold whitespace-nowrap"></span>
+        </div>
+      </div>
+
+      <!-- HORIZONTAL FILTER PILLS (WITH STAR SPIKE & GROWING TABS) -->
+      <div class="mt-2.5 flex items-center gap-1.5 overflow-x-auto custom-scrollbar touch-scroll pb-1 text-xs">
+        <button onclick="setFilter('all')" data-filter="all" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-semibold text-xs bg-sky-600 text-white shadow-sm">
+          Tất cả (<span id="cnt-all">0</span>)
+        </button>
+        <button onclick="setFilter('spike')" data-filter="spike" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-bold text-xs bg-amber-500/20 text-amber-300 border border-amber-500/50">
+          🚀 Tăng đột biến (<span id="cnt-spike">0</span>)
+        </button>
+        <button onclick="setFilter('growing')" data-filter="growing" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-semibold text-xs bg-emerald-950/70 text-emerald-300 border border-emerald-600/40">
+          📈 Đang tăng sao (<span id="cnt-growing">0</span>)
+        </button>
+        <button onclick="setFilter('new_only')" data-filter="new_only" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-rose-950/60 text-rose-300 border border-rose-600/40">
+          🔥 Mới quét (<span id="cnt-new">0</span>)
+        </button>
+        <button onclick="setFilter('openai')" data-filter="openai" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700">
+          🟢 OpenAI / ChatGPT (<span id="cnt-openai">0</span>)
+        </button>
+        <button onclick="setFilter('gemini')" data-filter="gemini" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700">
+          🔵 Google Gemini (<span id="cnt-gemini">0</span>)
+        </button>
+        <button onclick="setFilter('claude')" data-filter="claude" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700">
+          🟠 Claude (<span id="cnt-claude">0</span>)
+        </button>
+        <button onclick="setFilter('other_ai')" data-filter="other_ai" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700">
+          🟣 AI Khác (<span id="cnt-other_ai">0</span>)
+        </button>
+        <button onclick="setFilter('fav')" data-filter="fav" class="filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700">
+          ⭐ Đã thích (<span id="cnt-fav">0</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-3.5 py-4 space-y-4">
+
+    <!-- STAR SPIKE RADAR OVERVIEW BANNER -->
+    <section id="spikeOverviewBanner" class="p-3.5 rounded-2xl bg-gradient-to-r from-slate-800/90 via-slate-800/95 to-amber-950/30 border border-amber-500/30 shadow-md">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+        <div class="space-y-0.5">
+          <div class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-fire-flame-curved"></i> RADAR PHÁT HIỆN CÔNG CỤ TĂNG SAO ĐỘT BIẾN (SO SÁNH SAO CŨ &amp; MỚI)
+          </div>
+          <p id="spikeBannerDesc" class="text-[11px] text-slate-300">
+            Hệ thống tự động ghi nhận điểm sao gốc và so sánh sau mỗi lần quét (1–3 ngày) để chỉ ra công cụ nào đang tăng trưởng mạnh nhất cần ưu tiên nghiên cứu.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 self-start sm:self-center">
+          <button onclick="setFilter('spike')" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-xs font-bold whitespace-nowrap transition">
+            🚀 Xem ngay nhóm Đột Biến
+          </button>
+        </div>
+      </div>
+      <!-- Live progress bar when checking stars -->
+      <div id="liveStarProgressBox" class="hidden mt-2.5 pt-2 border-t border-slate-700/60">
+        <div class="flex items-center justify-between text-[11px] text-amber-300 mb-1">
+          <span id="liveStarStatusText"><i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang đối chiếu điểm sao trực tiếp từ GitHub...</span>
+          <span id="liveStarPctText">0%</span>
+        </div>
+        <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
+          <div id="liveStarBar" class="h-full bg-gradient-to-r from-amber-400 to-rose-500 transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPTY / WELCOME BANNER -->
+    <div id="emptyState" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 text-center space-y-3">
+      <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl">
+        <i class="fa-solid fa-file-arrow-up"></i>
+      </div>
+      <h2 class="text-base font-bold text-white">Chưa có dữ liệu kho mã nguồn</h2>
+      <p class="text-xs text-slate-400 leading-relaxed max-w-sm mx-auto">
+        Hãy bấm nút <strong>"Nạp JSON"</strong> ở góc trên để chọn tệp <code>data.json</code> hoặc đợi GitHub Actions cập nhật.
+      </p>
+    </div>
+
+    <!-- REPOSITORIES LIST -->
+    <div id="repoList" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+      <!-- Cards rendered via JavaScript -->
+    </div>
+
+    <!-- LOAD MORE BUTTON FOR SMOOTH PERFORMANCE ON 1362+ ITEMS -->
+    <div id="loadMoreWrap" class="hidden text-center pt-3">
+      <button onclick="loadMoreItems()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 shadow-md transition">
+        <i class="fa-solid fa-angles-down mr-1"></i> Hiển thị thêm kho mã nguồn (<span id="remainingCountText">0</span> kho còn lại)
+      </button>
+    </div>
+
+  </main>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTopBtn" class="hidden fixed bottom-5 right-5 w-11 h-11 rounded-full bg-sky-600 text-white shadow-xl flex items-center justify-center text-sm z-30 transition hover:bg-sky-500">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    window.EMBEDDED_DATA = null;
+
+    let allRepos = [];
+    let currentFilter = 'all';
+    let currentSort = 'newest';
+    let searchQuery = '';
+    let displayLimit = 60;
+    let favorites = JSON.parse(localStorage.getItem('topgit_mobile_favs') || '[]');
+    let translationCache = JSON.parse(localStorage.getItem('topgit_vi_trans_cache_v4') || '{}');
+    let baselineSnapshots = JSON.parse(localStorage.getItem('topgit_star_baseline_v4') || '{}');
+
+    const OLD_GENERIC_SET = new Set([
+      "Công cụ ứng dụng và tích hợp mô hình OpenAI ChatGPT vào trò chơi, tác vụ hoặc tiện ích mở rộng.",
+      "Bộ mã nguồn và tiện ích xây dựng trên hệ sinh thái mô hình trí tuệ nhân tạo Google Gemini.",
+      "Ứng dụng và thư viện hỗ trợ tương tác với mô hình Anthropic Claude.",
+      "Trò chơi tương tác 3D WebGL hoặc mã nguồn tạo ra bằng công nghệ sinh mã tự động.",
+      "Dự án phần mềm tiện ích mã nguồn mở trên GitHub.",
+      "Chưa có bản tóm tắt tiếng Việt.",
+      ""
+    ]);
+
+    function isGenericSummary(text) {
+      if (!text) return true;
+      const t = text.trim();
+      if (OLD_GENERIC_SET.has(t)) return true;
+      for (const g of OLD_GENERIC_SET) {
+        if (g && t.includes(g) && t.length < g.length + 15) return true;
+      }
+      return false;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function humanizeSlug(repoName) {
+      const slug = repoName.includes('/') ? repoName.split('/').pop() : repoName;
+      return slug.replace(/[-_]+/g, ' ').trim();
+    }
+
+    // Tổng hợp mô tả Tiếng Việt ĐỘC BẢN ngay trên trình duyệt cho bất kỳ kho nào đang bị câu mẫu trùng lặp
+    function generateUniqueVietnameseFallback(r) {
+      const repoName = r.repo_name || 'unknown/repo';
+      if (translationCache[repoName] && !isGenericSummary(translationCache[repoName].purpose)) {
+        return translationCache[repoName];
+      }
+
+      const [owner, slug] = repoName.includes('/') ? repoName.split('/') : ['GitHub', repoName];
+      const slugClean = humanizeSlug(slug || repoName);
+      const rawDesc = (r.description || '').trim();
+      const lang = r.language && r.language !== 'Unknown' ? r.language : 'Mã nguồn mở';
+      const eco = r.ai_ecosystem || 'AI / Phần mềm';
+      const combined = (slug + ' ' + rawDesc).toLowerCase();
+
+      const traits = [];
+      if (combined.includes('prompt')) traits.push('bộ sưu tập câu lệnh (prompts) tối ưu');
+      if (combined.includes('image') || combined.includes('vision') || combined.includes('draw') || combined.includes('flux')) traits.push('tạo và xử lý hình ảnh bằng AI');
+      if (combined.includes('video') || combined.includes('sora') || combined.includes('animate')) traits.push('sản xuất và dựng video AI');
+      if (combined.includes('audio') || combined.includes('voice') || combined.includes('tts') || combined.includes('speech')) traits.push('tổng hợp và nhận diện giọng nói');
+      if (combined.includes('agent') || combined.includes('autonomous') || combined.includes('crew')) traits.push('tác nhân AI tự hành (AI Agent)');
+      if (combined.includes('mcp')) traits.push('máy chủ giao thức kết nối ngữ cảnh MCP');
+      if (combined.includes('threejs') || combined.includes('3d') || combined.includes('webgl') || combined.includes('shader')) traits.push('đồ họa 3D tương tác trên web (Three.js/WebGL)');
+      if (combined.includes('game') || combined.includes('chess') || combined.includes('rpg') || combined.includes('play') || combined.includes('puzzle')) traits.push('trò chơi tương tác giải trí/giáo dục');
+      if (combined.includes('bot') || combined.includes('telegram') || combined.includes('discord') || combined.includes('whatsapp')) traits.push('chatbot tự động đa nền tảng');
+      if (combined.includes('rag') || combined.includes('pdf') || combined.includes('knowledge') || combined.includes('search')) traits.push('truy xuất tri thức thông minh (RAG)');
+      if (combined.includes('code') || combined.includes('copilot') || combined.includes('cursor') || combined.includes('ide')) traits.push('trợ lý lập trình và sinh mã nguồn');
+      if (combined.includes('awesome')) traits.push('danh sách tài nguyên & công cụ chọn lọc');
+      if (combined.includes('ui') || combined.includes('dashboard') || combined.includes('chat') || combined.includes('web')) traits.push('giao diện ứng dụng trực quan');
+
+      const traitText = traits.length > 0 ? traits.slice(0, 3).join(', ') : ('giải pháp chuyên biệt thuộc nhóm ' + (r.source_section || eco));
+
+      let purpose = '';
+      if (rawDesc) {
+        purpose = 'Dự án "' + slugClean + '" (tác giả: ' + owner + ') cung cấp ' + traitText + ' viết bằng ' + lang + '. Mô tả chi tiết: ' + rawDesc;
+      } else {
+        purpose = 'Dự án "' + slugClean + '" do ' + owner + ' phát triển (' + lang + '), tập trung giải quyết bài toán ' + traitText + ' trong hệ sinh thái ' + eco + '.';
+      }
+
+      let practical = '';
+      if (combined.includes('prompt')) {
+        practical = 'Mở kho ' + repoName + ' để chọn lọc các mẫu prompt phù hợp và áp dụng trực tiếp vào ChatGPT / Gemini / Claude.';
+      } else if (combined.includes('threejs') || combined.includes('game') || combined.includes('html5')) {
+        practical = 'Chạy trực tiếp mã nguồn ' + repoName + ' trên trình duyệt hoặc máy chủ cục bộ để trải nghiệm và tùy biến cơ chế hoạt động.';
+      } else if (combined.includes('awesome')) {
+        practical = 'Sử dụng ' + repoName + ' làm danh mục tra cứu nhanh các thư viện, bài viết và công cụ tốt nhất trong lĩnh vực này.';
+      } else {
+        practical = 'Tải mã nguồn ' + repoName + ' (' + lang + '), cấu hình khóa API theo hướng dẫn README để tích hợp vào quy trình làm việc.';
+      }
+
+      return { purpose, practical };
+    }
+
+    // Dịch trực tiếp mô tả tiếng Anh/Trung sang tiếng Việt bằng Google GTX ngay trên trình duyệt cho các thẻ đang hiển thị
+    let activeGtxQueue = [];
+    let isProcessingGtx = false;
+
+    function queueLiveTranslation(repo) {
+      const repoName = repo.repo_name;
+      if (!repo.description || (translationCache[repoName] && translationCache[repoName].gtxDone)) return;
+      if (!activeGtxQueue.some(item => item.repo_name === repoName)) {
+        activeGtxQueue.push(repo);
+      }
+      if (!isProcessingGtx) {
+        processGtxQueue();
+      }
+    }
+
+    async function processGtxQueue() {
+      if (activeGtxQueue.length === 0) {
+        isProcessingGtx = false;
+        return;
+      }
+      isProcessingGtx = true;
+      const repo = activeGtxQueue.shift();
+      const repoName = repo.repo_name;
+      const rawDesc = (repo.description || '').trim();
+
+      if (rawDesc) {
+        try {
+          const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=vi&dt=t&q=' + encodeURIComponent(rawDesc.slice(0, 450));
+          const res = await fetch(url);
+          if (res.ok) {
+            const data = await res.json();
+            if (data && Array.isArray(data[0])) {
+              const viText = data[0].map(p => p[0]).join('').trim();
+              if (viText) {
+                const [owner, slug] = repoName.includes('/') ? repoName.split('/') : ['GitHub', repoName];
+                const lang = repo.language && repo.language !== 'Unknown' ? repo.language : 'Mã nguồn mở';
+                const finalPurpose = viText + (viText.endsWith('.') ? '' : '.') + ' (Dự án ' + humanizeSlug(slug) + ' của ' + owner + ' • ' + lang + ').';
+                const fallbackObj = generateUniqueVietnameseFallback(repo);
+                repo.purpose_summary = finalPurpose;
+                repo.practical_use = fallbackObj.practical;
+                translationCache[repoName] = { purpose: finalPurpose, practical: fallbackObj.practical, gtxDone: true };
+                localStorage.setItem('topgit_vi_trans_cache_v4', JSON.stringify(translationCache));
+
+                const el = document.getElementById('purpose-' + repoName.replace(/[^a-zA-Z0-9]/g, '_'));
+                if (el) el.innerText = finalPurpose;
+                const elUse = document.getElementById('use-' + repoName.replace(/[^a-zA-Z0-9]/g, '_'));
+                if (elUse) elUse.innerText = fallbackObj.practical;
+              }
+            }
+          }
+        } catch (e) {}
+      }
+      setTimeout(processGtxQueue, 180);
+    }
+
+    // Chuẩn hóa dữ liệu điểm sao và bản dịch cho toàn bộ 1362+ kho
+    function normalizeAndEnrichRepos(repos) {
+      const nowIso = new Date().toISOString();
+      const todayStr = nowIso.slice(0, 10);
+      let snapshotChanged = false;
+
+      repos.forEach((r, idx) => {
+        if (!r.id) r.id = idx + 1;
+        const rname = r.repo_name || ('repo_' + idx);
+        const currStars = Number(r.stars || 0);
+
+        // 1. Lưu mốc sao gốc vào trình duyệt nếu chưa có để đối chiếu xuyên suốt
+        if (!baselineSnapshots[rname]) {
+          baselineSnapshots[rname] = { stars: currStars, date: (r.first_seen_at || nowIso).slice(0, 10) };
+          snapshotChanged = true;
+        }
+
+        // 2. Tính toán điểm sao cũ và mức tăng trưởng
+        let prevStars = r.prev_stars !== undefined ? Number(r.prev_stars) : null;
+        let prevDate = r.prev_stars_date || '';
+
+        if (prevStars === null) {
+          if (Array.isArray(r.star_history) && r.star_history.length >= 2) {
+            const firstEntry = r.star_history[0];
+            prevStars = Number(firstEntry.stars || currStars);
+            prevDate = firstEntry.date || '';
+          } else if (baselineSnapshots[rname] && baselineSnapshots[rname].stars !== currStars) {
+            prevStars = Number(baselineSnapshots[rname].stars);
+            prevDate = baselineSnapshots[rname].date;
+          } else {
+            // Kiểm tra tốc độ tăng từ chuỗi stars_growth (ví dụ '+177/d')
+            const m = String(r.stars_growth || '').match(/\+\s*(\d+(\.\d+)?)\s*(k)?/i);
+            if (m) {
+              let gain = parseFloat(m[1]);
+              if (m[3] && m[3].toLowerCase() === 'k') gain *= 1000;
+              gain = Math.round(gain);
+              prevStars = Math.max(currStars - gain, 0);
+              prevDate = 'Trước đó';
+            } else {
+              prevStars = currStars;
+              prevDate = (r.first_seen_at || nowIso).slice(0, 10);
+            }
+          }
+        }
+
+        const diff3d = r.stars_diff_3d !== undefined ? Number(r.stars_diff_3d) : (currStars - prevStars);
+        const pct3d = r.stars_growth_pct !== undefined
+          ? Number(r.stars_growth_pct)
+          : (prevStars > 0 && diff3d !== 0 ? Math.round((diff3d / prevStars) * 1000) / 10 : (diff3d > 0 ? 100 : 0));
+
+        r.prev_stars = prevStars;
+        r.prev_stars_date = prevDate || todayStr;
+        r.stars_diff_3d = diff3d;
+        r.stars_growth_pct = pct3d;
+
+        if (!r.growth_tier) {
+          if (diff3d >= 30 || (diff3d >= 10 && pct3d >= 15)) {
+            r.growth_tier = 'SPIKE';
+          } else if (diff3d > 0) {
+            r.growth_tier = 'GROWING';
+          } else {
+            r.growth_tier = 'STABLE';
+          }
+        }
+
+        // 3. Khắc phục ngay lập tức nếu kho đang bị câu mô tả tiếng Việt trùng lặp
+        if (isGenericSummary(r.purpose_summary)) {
+          const unique = generateUniqueVietnameseFallback(r);
+          r.purpose_summary = unique.purpose;
+          r.practical_use = unique.practical;
+          r._needsLiveGtx = true;
+        }
+      });
+
+      if (snapshotChanged) {
+        try { localStorage.setItem('topgit_star_baseline_v4', JSON.stringify(baselineSnapshots)); } catch (e) {}
+      }
+    }
+
+    // Tính năng Quét & So Sánh Điểm Sao Trực Tiếp từ GitHub API ngay trên trình duyệt
+    async function runLiveStarComparison() {
+      if (allRepos.length === 0) return;
+      const btn = document.getElementById('btnLiveStarCheck');
+      const progBox = document.getElementById('liveStarProgressBox');
+      const statusTxt = document.getElementById('liveStarStatusText');
+      const pctTxt = document.getElementById('liveStarPctText');
+      const bar = document.getElementById('liveStarBar');
+
+      btn.disabled = true;
+      progBox.classList.remove('hidden');
+
+      // Chọn tối đa 120 kho nổi bật hoặc mới quét để kiểm tra trực tiếp trong 6 request gộp (20 kho/request)
+      const targets = allRepos.slice(0, 120).filter(r => r.repo_name && r.repo_name.includes('/'));
+      const batchSize = 20;
+      let checked = 0;
+      let spikesFound = 0;
+
+      for (let i = 0; i < targets.length; i += batchSize) {
+        const batch = targets.slice(i, i + batchSize);
+        const q = batch.map(r => 'repo:' + r.repo_name).join(' ');
+        const url = 'https://api.github.com/search/repositories?q=' + encodeURIComponent(q) + '&per_page=30';
+
+        try {
+          const res = await fetch(url, { headers: { 'Accept': 'application/vnd.github.v3+json' } });
+          if (res.ok) {
+            const data = await res.json();
+            const items = data.items || [];
+            items.forEach(item => {
+              const fn = (item.full_name || '').toLowerCase();
+              const match = allRepos.find(r => (r.repo_name || '').toLowerCase() === fn);
+              if (match) {
+                const oldS = Number(match.prev_stars !== undefined ? match.prev_stars : match.stars || 0);
+                const liveS = Number(item.stargazers_count || match.stars || 0);
+                match.stars = liveS;
+                match.stars_text = liveS >= 1000 ? (liveS / 1000).toFixed(1) + 'k' : String(liveS);
+                if (item.description && (!match.description || isGenericSummary(match.purpose_summary))) {
+                  match.description = item.description;
+                  const unique = generateUniqueVietnameseFallback(match);
+                  match.purpose_summary = unique.purpose;
+                  match.practical_use = unique.practical;
+                  match._needsLiveGtx = true;
+                }
+                const diff = liveS - oldS;
+                match.stars_diff_3d = diff;
+                match.stars_growth_pct = oldS > 0 && diff !== 0 ? Math.round((diff / oldS) * 1000) / 10 : 0;
+                if (diff >= 30 || (diff >= 10 && match.stars_growth_pct >= 15)) {
+                  match.growth_tier = 'SPIKE';
+                  spikesFound++;
+                } else if (diff > 0) {
+                  match.growth_tier = 'GROWING';
+                }
+              }
+            });
+          } else if (res.status === 403) {
+            statusTxt.innerHTML = '⚠️ Đã đạt giới hạn tra cứu nhanh của GitHub API, hiển thị kết quả đã thu thập.';
+            break;
+          }
+        } catch (e) {}
+
+        checked += batch.length;
+        const pct = Math.min(Math.round((checked / targets.length) * 100), 100);
+        pctTxt.innerText = pct + '%';
+        bar.style.width = pct + '%';
+        statusTxt.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đã kiểm tra điểm sao trực tiếp ' + checked + '/' + targets.length + ' công cụ...';
+        await new Promise(r => setTimeout(r, 900));
+      }
+
+      updateCounts();
+      renderList();
+      statusTxt.innerHTML = '✅ Hoàn tất đối chiếu điểm sao trực tiếp! Hãy chọn mục <strong>"🚀 Tăng đột biến"</strong> hoặc <strong>"📈 Đang tăng sao"</strong> để xem.';
+      btn.disabled = false;
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (window.EMBEDDED_DATA && window.EMBEDDED_DATA.repositories) {
+        loadData(window.EMBEDDED_DATA.repositories);
+        return;
+      }
+
+      const tryFiles = ['data.json?t=' + Date.now(), 'topgit_data.json', 'topgit_export.json'];
+      let loaded = false;
+      for (const fname of tryFiles) {
+        try {
+          const res = await fetch(fname);
+          if (res.ok) {
+            const data = await res.json();
+            const repos = data.repositories || data.items || data;
+            if (Array.isArray(repos) && repos.length > 0) {
+              loadData(repos);
+              loaded = true;
+              break;
+            }
+          }
+        } catch (e) {}
+      }
+
+      if (!loaded) {
+        const cached = localStorage.getItem('topgit_last_scanned_cache');
+        if (cached) {
+          try {
+            const repos = JSON.parse(cached);
+            if (Array.isArray(repos) && repos.length > 0) {
+              loadData(repos);
+              loaded = true;
+            }
+          } catch (e) {}
+        }
+      }
+
+      if (!loaded) {
+        document.getElementById('emptyState').classList.remove('hidden');
+        document.getElementById('totalStatsText').innerText = 'Chưa nạp dữ liệu';
+      }
+    });
+
+    function loadData(repos) {
+      normalizeAndEnrichRepos(repos);
+      allRepos = repos;
+      document.getElementById('emptyState').classList.add('hidden');
+      try { localStorage.setItem('topgit_last_scanned_cache', JSON.stringify(repos.slice(0, 500))); } catch (e) {}
+      updateCounts();
+      renderList();
+    }
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const data = JSON.parse(e.target.result);
+          const repos = data.repositories || data.items || data;
+          if (Array.isArray(repos)) {
+            loadData(repos);
+            alert('✅ Đã nạp thành công ' + repos.length + ' kho mã nguồn!');
+          } else {
+            alert('⚠️ Định dạng tệp JSON không hợp lệ!');
+          }
+        } catch (err) {
+          alert('❌ Lỗi đọc tệp JSON: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function updateCounts() {
+      const total = allRepos.length;
+      let cntOpenAI = 0, cntGemini = 0, cntClaude = 0, cntOther = 0;
+      let cntSpike = 0, cntGrowing = 0, cntNew = 0;
+
+      allRepos.forEach(r => {
+        const eco = (r.ai_ecosystem || '').toLowerCase();
+        if (eco.includes('openai') || eco.includes('chatgpt')) cntOpenAI++;
+        else if (eco.includes('gemini') || eco.includes('google')) cntGemini++;
+        else if (eco.includes('claude') || eco.includes('anthropic')) cntClaude++;
+        else cntOther++;
+
+        const diff = Number(r.stars_diff_3d || 0);
+        if (r.growth_tier === 'SPIKE' || diff >= 30) cntSpike++;
+        if (diff > 0 || r.growth_tier === 'SPIKE' || r.growth_tier === 'GROWING') cntGrowing++;
+        if (r.is_new_in_last_scan || (r.stars_growth && r.stars_growth.includes('Mới'))) cntNew++;
+      });
+
+      document.getElementById('totalStatsText').innerText = total + ' kho đã quét • 🚀 ' + cntSpike + ' tăng đột biến • 📈 ' + cntGrowing + ' đang tăng';
+      document.getElementById('cnt-all').innerText = total;
+      document.getElementById('cnt-spike').innerText = cntSpike;
+      document.getElementById('cnt-growing').innerText = cntGrowing;
+      document.getElementById('cnt-new').innerText = cntNew;
+      document.getElementById('cnt-openai').innerText = cntOpenAI;
+      document.getElementById('cnt-gemini').innerText = cntGemini;
+      document.getElementById('cnt-claude').innerText = cntClaude;
+      document.getElementById('cnt-other_ai').innerText = cntOther;
+      document.getElementById('cnt-fav').innerText = favorites.length;
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      displayLimit = 60;
+      if (filter === 'spike' || filter === 'growing') {
+        currentSort = 'spike';
+        document.getElementById('sortSelect').value = 'spike';
+      }
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.className = 'filter-pill px-3 py-1 rounded-full whitespace-nowrap font-bold text-xs bg-sky-600 text-white shadow-sm';
+        } else if (btn.dataset.filter === 'spike') {
+          btn.className = 'filter-pill px-3 py-1 rounded-full whitespace-nowrap font-bold text-xs bg-amber-500/20 text-amber-300 border border-amber-500/50';
+        } else if (btn.dataset.filter === 'growing') {
+          btn.className = 'filter-pill px-3 py-1 rounded-full whitespace-nowrap font-semibold text-xs bg-emerald-950/70 text-emerald-300 border border-emerald-600/40';
+        } else {
+          btn.className = 'filter-pill px-3 py-1 rounded-full whitespace-nowrap font-medium text-xs bg-slate-800 text-slate-300 border border-slate-700';
+        }
+      });
+      renderList();
+    }
+
+    function onSortChange() {
+      currentSort = document.getElementById('sortSelect').value;
+      displayLimit = 60;
+      renderList();
+    }
+
+    function onSearchInput() {
+      searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+      displayLimit = 60;
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (searchQuery) clearBtn.classList.remove('hidden');
+      else clearBtn.classList.add('hidden');
+      renderList();
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      searchQuery = '';
+      displayLimit = 60;
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderList();
+    }
+
+    function loadMoreItems() {
+      displayLimit += 80;
+      renderList();
+    }
+
+    function toggleFav(id, event) {
+      if (event) event.stopPropagation();
+      const numId = Number(id);
+      if (favorites.includes(numId)) {
+        favorites = favorites.filter(x => x !== numId);
+      } else {
+        favorites.push(numId);
+      }
+      localStorage.setItem('topgit_mobile_favs', JSON.stringify(favorites));
+      document.getElementById('cnt-fav').innerText = favorites.length;
+      renderList();
+    }
+
+    function copyLink(url, event) {
+      if (event) event.stopPropagation();
+      navigator.clipboard.writeText(url).then(() => {
+        alert('📋 Đã sao chép link GitHub!');
+      }).catch(() => {
+        alert('Link: ' + url);
+      });
+    }
+
+    function getEcoBadge(eco) {
+      const e = (eco || '').toLowerCase();
+      if (e.includes('openai') || e.includes('chatgpt')) {
+        return '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-robot mr-1"></i> OpenAI #1</span>';
+      } else if (e.includes('gemini') || e.includes('google')) {
+        return '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30"><i class="fa-solid fa-sparkles mr-1"></i> Gemini #2</span>';
+      } else if (e.includes('claude') || e.includes('anthropic')) {
+        return '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30"><i class="fa-solid fa-brain mr-1"></i> Claude #3</span>';
+      } else if (e.includes('khác') || e.includes('other')) {
+        return '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/30"><i class="fa-solid fa-microchip mr-1"></i> AI Khác #4</span>';
+      } else {
+        return '<span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-700/50 text-slate-400 border border-slate-600/30">Tiện ích #5</span>';
+      }
+    }
+
+    function buildStarComparisonBox(r) {
+      const curr = Number(r.stars || 0);
+      const prev = Number(r.prev_stars !== undefined ? r.prev_stars : curr);
+      const diff = Number(r.stars_diff_3d || (curr - prev));
+      const pct = Number(r.stars_growth_pct || 0);
+      const isSpike = r.growth_tier === 'SPIKE' || diff >= 30 || (diff >= 10 && pct >= 15);
+      const isGrowing = diff > 0;
+
+      if (isSpike) {
+        return '<div class="p-2.5 rounded-xl bg-gradient-to-r from-amber-950/60 via-rose-950/40 to-slate-900 border border-amber-500/50 flex flex-wrap items-center justify-between gap-2 text-xs">' +
+          '<div class="flex items-center gap-2">' +
+            '<span class="px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-wider flex items-center gap-1">' +
+              '<i class="fa-solid fa-rocket"></i> Tăng đột biến' +
+            '</span>' +
+            '<span class="text-slate-300 text-[11px]">Sao cũ: <strong class="text-slate-200">' + prev.toLocaleString() + '</strong> <i class="fa-solid fa-arrow-right text-[10px] text-amber-400 mx-0.5"></i> Hiện tại: <strong class="text-amber-300">' + curr.toLocaleString() + ' ⭐</strong></span>' +
+          '</div>' +
+          '<div class="text-amber-300 font-extrabold text-xs flex items-center gap-1">' +
+            '<i class="fa-solid fa-arrow-trend-up"></i> +' + diff.toLocaleString() + ' sao ' + (pct > 0 ? '(+' + pct + '%)' : '') +
+          '</div>' +
+        '</div>';
+      } else if (isGrowing) {
+        return '<div class="p-2 rounded-xl bg-emerald-950/30 border border-emerald-700/40 flex flex-wrap items-center justify-between gap-2 text-xs">' +
+          '<div class="flex items-center gap-2">' +
+            '<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px] flex items-center gap-1">' +
+              '<i class="fa-solid fa-chart-line"></i> Đang tăng sao' +
+            '</span>' +
+            '<span class="text-slate-300 text-[11px]">Sao cũ: <strong>' + prev.toLocaleString() + '</strong> ➔ Hiện tại: <strong class="text-emerald-300">' + curr.toLocaleString() + ' ⭐</strong></span>' +
+          '</div>' +
+          '<div class="text-emerald-400 font-bold text-xs">+' + diff.toLocaleString() + ' sao ' + (pct > 0 ? '(+' + pct + '%)' : '') + '</div>' +
+        '</div>';
+      } else {
+        return '<div class="px-2.5 py-1.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between text-[11px] text-slate-400">' +
+          '<span><i class="fa-regular fa-star text-amber-400/80 mr-1"></i> Mốc sao ghi nhận: <strong class="text-slate-300">' + curr.toLocaleString() + ' ⭐</strong></span>' +
+          '<span class="text-[10px] text-slate-500">Đang theo dõi biến động 3 ngày</span>' +
+        '</div>';
+      }
+    }
+
+    function renderList() {
+      const container = document.getElementById('repoList');
+      let filtered = allRepos.slice();
+
+      // 1. Bộ lọc danh mục
+      if (currentFilter === 'spike') {
+        filtered = filtered.filter(r => r.growth_tier === 'SPIKE' || Number(r.stars_diff_3d || 0) >= 30 || (Number(r.stars_diff_3d || 0) >= 10 && Number(r.stars_growth_pct || 0) >= 15));
+      } else if (currentFilter === 'growing') {
+        filtered = filtered.filter(r => Number(r.stars_diff_3d || 0) > 0 || r.growth_tier === 'SPIKE' || r.growth_tier === 'GROWING');
+      } else if (currentFilter === 'new_only') {
+        filtered = filtered.filter(r => r.is_new_in_last_scan || (r.stars_growth && r.stars_growth.includes('Mới')));
+      } else if (currentFilter === 'openai') {
+        filtered = filtered.filter(r => (r.ai_ecosystem || '').toLowerCase().includes('openai') || (r.ai_ecosystem || '').toLowerCase().includes('chatgpt'));
+      } else if (currentFilter === 'gemini') {
+        filtered = filtered.filter(r => (r.ai_ecosystem || '').toLowerCase().includes('gemini') || (r.ai_ecosystem || '').toLowerCase().includes('google'));
+      } else if (currentFilter === 'claude') {
+        filtered = filtered.filter(r => (r.ai_ecosystem || '').toLowerCase().includes('claude') || (r.ai_ecosystem || '').toLowerCase().includes('anthropic'));
+      } else if (currentFilter === 'other_ai') {
+        filtered = filtered.filter(r => {
+          const e = (r.ai_ecosystem || '').toLowerCase();
+          return !e.includes('openai') && !e.includes('chatgpt') && !e.includes('gemini') && !e.includes('google') && !e.includes('claude') && !e.includes('anthropic');
+        });
+      } else if (currentFilter === 'fav') {
+        filtered = filtered.filter(r => favorites.includes(Number(r.id)));
+      }
+
+      // 2. Bộ lọc từ khóa tìm kiếm
+      if (searchQuery) {
+        filtered = filtered.filter(r => {
+          const txt = (r.repo_name + ' ' + (r.title || '') + ' ' + (r.purpose_summary || '') + ' ' + (r.practical_use || '') + ' ' + (r.description || '')).toLowerCase();
+          return txt.includes(searchQuery);
+        });
+      }
+
+      // 3. Sắp xếp
+      if (currentSort === 'spike') {
+        filtered.sort((a, b) => {
+          const aDiff = Number(a.stars_diff_3d || 0);
+          const bDiff = Number(b.stars_diff_3d || 0);
+          if (bDiff !== aDiff) return bDiff - aDiff;
+          return Number(b.stars || 0) - Number(a.stars || 0);
+        });
+      } else if (currentSort === 'growth_pct') {
+        filtered.sort((a, b) => {
+          const aPct = Number(a.stars_growth_pct || 0);
+          const bPct = Number(b.stars_growth_pct || 0);
+          if (bPct !== aPct) return bPct - aPct;
+          return Number(b.stars_diff_3d || 0) - Number(a.stars_diff_3d || 0);
+        });
+      } else if (currentSort === 'newest') {
+        filtered.sort((a, b) => {
+          const aNew = a.is_new_in_last_scan ? 1 : 0;
+          const bNew = b.is_new_in_last_scan ? 1 : 0;
+          if (aNew !== bNew) return bNew - aNew;
+          const aTime = new Date(a.last_updated_at || a.first_seen_at || 0).getTime();
+          const bTime = new Date(b.last_updated_at || b.first_seen_at || 0).getTime();
+          if (aTime !== bTime) return bTime - aTime;
+          return (b.id || 0) - (a.id || 0);
+        });
+      } else if (currentSort === 'stars') {
+        filtered.sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
+      } else if (currentSort === 'ai') {
+        filtered.sort((a, b) => (a.ai_priority || 5) - (b.ai_priority || 5) || Number(b.stars || 0) - Number(a.stars || 0));
+      }
+
+      const resCountEl = document.getElementById('filterResultCount');
+      if (resCountEl) resCountEl.innerText = filtered.length + ' kho';
+
+      const loadMoreWrap = document.getElementById('loadMoreWrap');
+      if (filtered.length === 0) {
+        loadMoreWrap.classList.add('hidden');
+        container.innerHTML = '<div class="col-span-full p-8 text-center text-slate-400 text-xs bg-slate-800/40 rounded-2xl border border-slate-800">' +
+          '<i class="fa-solid fa-chart-simple text-2xl mb-2 block text-amber-400"></i>' +
+          'Chưa có kho mã nguồn nào trong mục lọc này. Bạn có thể bấm nút <strong>"⚡ So sánh Sao Live"</strong> ở góc trên để quét biến động điểm sao trực tiếp từ GitHub!' +
+        '</div>';
+        return;
+      }
+
+      const visibleItems = filtered.slice(0, displayLimit);
+      if (filtered.length > displayLimit) {
+        loadMoreWrap.classList.remove('hidden');
+        document.getElementById('remainingCountText').innerText = (filtered.length - displayLimit);
+      } else {
+        loadMoreWrap.classList.add('hidden');
+      }
+
+      let html = '';
+      visibleItems.forEach(r => {
+        const isFav = favorites.includes(Number(r.id));
+        const ecoBadge = getEcoBadge(r.ai_ecosystem);
+        const safeId = (r.repo_name || '').replace(/[^a-zA-Z0-9]/g, '_');
+        const purposeVi = escapeHtml(r.purpose_summary || 'Đang tổng hợp mô tả tiếng Việt...');
+        const practicalUse = escapeHtml(r.practical_use || 'Xem hướng dẫn chi tiết trong README của dự án.');
+        const lang = r.language && r.language !== 'Unknown' ? '<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-medium border border-slate-700">' + escapeHtml(r.language) + '</span>' : '';
+        const ghUrl = r.github_url || ('https://github.com/' + r.repo_name);
+        const isSpike = r.growth_tier === 'SPIKE' || Number(r.stars_diff_3d || 0) >= 30;
+        const starBoxHtml = buildStarComparisonBox(r);
+
+        if (r._needsLiveGtx) {
+          queueLiveTranslation(r);
+        }
+
+        html += '<article class="touch-card p-4 rounded-2xl bg-slate-800/90 border ' + (isSpike ? 'spike-card border-amber-500/70' : 'border-slate-700/80') + ' shadow-md flex flex-col justify-between space-y-3">' +
+          '<div class="space-y-2.5">' +
+            '<div class="flex items-start justify-between gap-2">' +
+              '<div class="flex-1 min-w-0">' +
+                '<div class="flex items-center gap-1.5 flex-wrap mb-1.5">' +
+                  ((r.is_new_in_last_scan) ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-500/20 text-rose-300 border border-rose-500/40 flex items-center gap-1"><i class="fa-solid fa-fire text-rose-400"></i> MỚI CẬP NHẬT</span>' : '') +
+                  ecoBadge +
+                  lang +
+                '</div>' +
+                '<h3 class="text-sm font-bold text-white truncate">' +
+                  '<a href="' + ghUrl + '" target="_blank" class="hover:text-sky-400 transition flex items-center gap-1.5">' +
+                    '<i class="fa-brands fa-github text-slate-400"></i> ' + escapeHtml(r.repo_name) +
+                  '</a>' +
+                '</h3>' +
+              '</div>' +
+              '<button onclick="toggleFav(' + r.id + ', event)" class="w-8 h-8 rounded-lg ' + (isFav ? 'text-amber-400 bg-amber-500/10' : 'text-slate-400 hover:text-amber-400 bg-slate-700/50') + ' flex items-center justify-center transition">' +
+                '<i class="' + (isFav ? 'fa-solid' : 'fa-regular') + ' fa-star text-sm"></i>' +
+              '</button>' +
+            '</div>' +
+
+            // HỘP SO SÁNH ĐIỂM SAO CŨ & MỚI
+            starBoxHtml +
+
+            // CÔNG CỤ PHỤC VỤ GÌ (ĐỘC BẢN TIẾNG VIỆT)
+            '<div class="p-3 rounded-xl bg-slate-900/85 border border-slate-700/60 space-y-1">' +
+              '<div class="text-[10px] font-bold text-sky-400 uppercase tracking-wide flex items-center gap-1">' +
+                '<i class="fa-solid fa-bullseye"></i> Công cụ phục vụ gì (Tiếng Việt):' +
+              '</div>' +
+              '<p id="purpose-' + safeId + '" class="text-xs text-slate-200 leading-relaxed">' + purposeVi + '</p>' +
+            '</div>' +
+
+            // KHẢ NĂNG ỨNG DỤNG THỰC TẾ
+            '<div class="p-2.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40 text-xs space-y-1">' +
+              '<div class="text-[10px] font-bold text-emerald-400 flex items-center gap-1">' +
+                '<i class="fa-solid fa-lightbulb"></i> Khả năng ứng dụng thực tế:' +
+              '</div>' +
+              '<p id="use-' + safeId + '" class="text-[11px] text-emerald-200/90 leading-relaxed">' + practicalUse + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          // BOTTOM ACTIONS
+          '<div class="flex items-center justify-between pt-2 border-t border-slate-700/50 text-xs">' +
+            '<button onclick="copyLink(this.dataset.url, event)" data-url="' + ghUrl + '" class="text-slate-400 hover:text-slate-200 flex items-center gap-1 text-[11px]">' +
+              '<i class="fa-regular fa-copy"></i> Sao chép link' +
+            '</button>' +
+            '<a href="' + ghUrl + '" target="_blank" class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm">' +
+              'Mở GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>' +
+            '</a>' +
+          '</div>' +
+        '</article>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 300) btn.classList.remove('hidden');
+      else btn.classList.add('hidden');
+    });
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      const btn = document.getElementById('themeBtn');
+      if (isDark) {
+        document.body.className = 'bg-slate-900 text-slate-100 min-h-screen pb-24 selection:bg-sky-500 selection:text-white';
+        btn.innerHTML = '<i class="fa-solid fa-sun text-xs text-amber-400"></i>';
+      } else {
+        document.body.className = 'bg-slate-100 text-slate-900 min-h-screen pb-24 selection:bg-sky-500 selection:text-white';
+        btn.innerHTML = '<i class="fa-solid fa-moon text-xs text-slate-600"></i>';
+      }
+    }
+  </script>
+</body>
+</html>
