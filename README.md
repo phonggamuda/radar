@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-10-21 23:16:06` (Phát hiện mới: **87** kho | Đang tăng sao: **250** kho).
-- **Tổng số kho mã nguồn tích lũy:** **2112 kho**.
+- **Thời gian cập nhật:** `2026-10-22 23:18:38` (Phát hiện mới: **94** kho | Đang tăng sao: **260** kho).
+- **Tổng số kho mã nguồn tích lũy:** **2206 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **190** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **503** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **87** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **1332** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **196** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **531** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **90** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **1389** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 173.8k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 34.8k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-3. **[repowise-dev/repowise](https://github.com/repowise-dev/repowise)** (🟣 AI Khác | ⭐ 7.9k): Dự án 'repowise' (bởi repowise-dev) tập trung vào giao thức kết nối ngữ cảnh mô hình (MCP Server), truy xuất tri thức từ tài liệu (RAG), hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.
-4. **[nocobase/nocobase](https://github.com/nocobase/nocobase)** (🟣 AI Khác | ⭐ 24.7k): NocoBase là một nền tảng AI + không mã nguồn mở để xây dựng hệ thống kinh doanh nhanh chóng. Thay vì tạo ra mọi thứ từ đầu, AI hoạt động dựa trên cơ sở hạ tầng đã được chứng minh trong sản xuất và giao diện không có mã WYSIWYG, do đó bạn sẽ có được cả tốc độ và độ tin cậy. (Dự án nocobase của nocobase, phát triển bằng TypeScript).
-5. **[YouMind-OpenLab/awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts)** (🔵 Gemini | ⭐ 13.7k): Dự án 'awesome nano banana pro prompts' (bởi YouMind-OpenLab) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, xử lý và khởi tạo hình ảnh bằng AI, danh sách tổng hợp tài nguyên và công cụ chọn lọc trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: 🍌 World's largest Nano Banana Pro prompt library — 10,000+ curated prompts with preview images, 16 languages. Google Gemini AI image generation. Free & open source.
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 174.0k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 34.9k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+3. **[YouMind-OpenLab/awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts)** (🔵 Gemini | ⭐ 13.7k): Dự án 'awesome nano banana pro prompts' (bởi YouMind-OpenLab) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, xử lý và khởi tạo hình ảnh bằng AI, danh sách tổng hợp tài nguyên và công cụ chọn lọc trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: 🍌 World's largest Nano Banana Pro prompt library — 10,000+ curated prompts with preview images, 16 languages. Google Gemini AI image generation. Free & open source.
+4. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.1k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
+5. **[instruktlabs/kiln](https://github.com/instruktlabs/kiln)** (🟣 AI Khác | ⭐ 291): Xây dựng và sửa đổi nội dung 3D theo quy trình bằng tác nhân mã hóa của bạn. Máy chủ MCP cục bộ, công cụ CLI và TypeScript với tính năng đánh giá được hiển thị, nguồn có thể chỉnh sửa và xuất GLB.
 
 ---
-👉 *Xem toàn bộ 2112 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 2206 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
