@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-10-25 23:14:01` (Phát hiện mới: **94** kho | Đang tăng sao: **261** kho).
-- **Tổng số kho mã nguồn tích lũy:** **2462 kho**.
+- **Thời gian cập nhật:** `2026-10-26 23:20:19` (Phát hiện mới: **85** kho | Đang tăng sao: **266** kho).
+- **Tổng số kho mã nguồn tích lũy:** **2547 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **220** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **594** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **94** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **1554** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **227** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **610** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **96** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **1614** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 174.5k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks)** (🟢 OpenAI | ⭐ 70.2k): Dự án 'system prompts leaks' (bởi asgeirtj) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, chatbot tự động tích hợp nền tảng nhắn tin, truy xuất tri thức từ tài liệu (RAG) trên nền tảng OpenAI / ChatGPT, viết bằng Python. Nội dung gốc: Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigrav
-3. **[NomaDamas/CozyClay](https://github.com/NomaDamas/CozyClay)** (🟣 AI Khác | ⭐ 1.0k): Phần mềm previs mã nguồn mở trong trình duyệt: chặn một cảnh, tạo dáng cho nhân vật, tác giả di chuyển và cắt camera, sau đó chụp các cảnh quay tương tự trên mô hình video AI.
-4. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.0k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 174.7k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.1k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+3. **[codeofaxel/Kiln](https://github.com/codeofaxel/Kiln)** (🟢 OpenAI | ⭐ 224): Dự án 'Kiln' (bởi codeofaxel) tập trung vào xử lý và khởi tạo hình ảnh bằng AI, tác nhân AI tự hành (AI Agent) xử lý đa tác vụ, giao thức kết nối ngữ cảnh mô hình (MCP Server) trên nền tảng OpenAI / ChatGPT, viết bằng Python. Nội dung gốc: Describe it or draw it — Kiln makes it real. The open-source MCP server for 3D printing: AI agents (Claude, Codex, Cursor, or any MCP client) design, generate, slice & print on Bam
+4. **[repowise-dev/repowise](https://github.com/repowise-dev/repowise)** (🟣 AI Khác | ⭐ 7.9k): Dự án 'repowise' (bởi repowise-dev) tập trung vào giao thức kết nối ngữ cảnh mô hình (MCP Server), truy xuất tri thức từ tài liệu (RAG), hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.
 5. **[YouMind-OpenLab/awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts)** (🔵 Gemini | ⭐ 13.7k): Dự án 'awesome nano banana pro prompts' (bởi YouMind-OpenLab) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, xử lý và khởi tạo hình ảnh bằng AI, danh sách tổng hợp tài nguyên và công cụ chọn lọc trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: 🍌 World's largest Nano Banana Pro prompt library — 10,000+ curated prompts with preview images, 16 languages. Google Gemini AI image generation. Free & open source.
 
 ---
-👉 *Xem toàn bộ 2462 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 2547 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
