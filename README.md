@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-02 23:27:50` (Phát hiện mới: **95** kho | Đang tăng sao: **292** kho).
-- **Tổng số kho mã nguồn tích lũy:** **3176 kho**.
+- **Thời gian cập nhật:** `2026-11-03 23:29:53` (Phát hiện mới: **101** kho | Đang tăng sao: **304** kho).
+- **Tổng số kho mã nguồn tích lũy:** **3277 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **276** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **767** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **119** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2014** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **282** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **791** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **124** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2080** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 175.6k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[loysger/Antigravity](https://github.com/loysger/Antigravity)** (🔵 Gemini | ⭐ 945): Dự án 'Antigravity' (bởi loysger) tập trung vào ứng dụng thuộc chuyên mục GitHub: Google Gemini Pro trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: Google Antigravity в России: запуск БЕЗ VPN на Windows, macOS и Linux. Обход ошибки 400 и блокировки аккаунта. Доступ к Claude 4.6 и Gemini 3.8 Flash High.
+1. **[loysger/Antigravity](https://github.com/loysger/Antigravity)** (🔵 Gemini | ⭐ 980): Dự án 'Antigravity' (bởi loysger) tập trung vào ứng dụng thuộc chuyên mục GitHub: Google Gemini Pro trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: Google Antigravity в России: запуск БЕЗ VPN на Windows, macOS и Linux. Обход ошибки 400 и блокировки аккаунта. Доступ к Claude 4.6 и Gemini 3.8 Flash High.
+2. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 175.7k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
 3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.4k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-4. **[luoyangdekai/chatgpt-plus-pro-Recharge-China](https://github.com/luoyangdekai/chatgpt-plus-pro-Recharge-China)** (🟢 OpenAI | ⭐ 244): Dự án 'chatgpt plus pro Recharge China' (bởi luoyangdekai) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng OpenAI / ChatGPT, viết bằng Other. Nội dung gốc: 2026年10月 全网最简 |  ChatGPT/Codex 充值/代充指南 | Plus 135， Pro100 650， Pro 200 1140元，支付宝/微信支付，1分钟极速到账，官方订阅・账单可查 | 附 Grok/Gemini/Claude充值/代充                                                 
-5. **[repowise-dev/repowise](https://github.com/repowise-dev/repowise)** (🟣 AI Khác | ⭐ 8.1k): Dự án 'repowise' (bởi repowise-dev) tập trung vào giao thức kết nối ngữ cảnh mô hình (MCP Server), truy xuất tri thức từ tài liệu (RAG), hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.
+4. **[Tavotto/Tavotto](https://github.com/Tavotto/Tavotto)** (🟣 AI Khác | ⭐ 654): Làm cho các số liệu khoa học do AI tạo ra có thể chỉnh sửa được mà không làm mất mã đằng sau chúng. (Dự án Tavotto của Tavotto, phát triển bằng Python).
+5. **[elmohq/elmo](https://github.com/elmohq/elmo)** (🟢 OpenAI | ⭐ 560): Dự án 'elmo' (bởi elmohq) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng OpenAI / ChatGPT, viết bằng TypeScript. Nội dung gốc: Open-source Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) platform. Track how ChatGPT, Claude, Perplexity, Gemini, Copilot, Grok, and Google AI Overview
 
 ---
-👉 *Xem toàn bộ 3176 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 3277 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
