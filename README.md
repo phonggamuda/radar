@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-10 04:27:12` (Phát hiện mới: **122** kho | Đang tăng sao: **345** kho).
-- **Tổng số kho mã nguồn tích lũy:** **3855 kho**.
+- **Thời gian cập nhật:** `2026-11-11 02:22:42` (Phát hiện mới: **96** kho | Đang tăng sao: **352** kho).
+- **Tổng số kho mã nguồn tích lũy:** **3951 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **325** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **913** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **147** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2470** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **331** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **936** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **151** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2533** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -40,10 +40,10 @@
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
 1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 176.8k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks)** (🟢 OpenAI | ⭐ 71.1k): Dự án 'system prompts leaks' (bởi asgeirtj) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, chatbot tự động tích hợp nền tảng nhắn tin, truy xuất tri thức từ tài liệu (RAG) trên nền tảng OpenAI / ChatGPT, viết bằng Python. Nội dung gốc: Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigrav
-3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.6k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-4. **[google/langextract](https://github.com/google/langextract)** (🔵 Gemini | ⭐ 39.3k): Dự án 'langextract' (bởi google) tập trung vào ứng dụng thuộc chuyên mục GitHub: Google Gemini Pro trên nền tảng Google Gemini, viết bằng Python. Nội dung gốc: A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.
-5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.2k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
+2. **[google/three-live](https://github.com/google/three-live)** (🟣 AI Khác | ⭐ 311): Dự án 'three live' (bởi google) tập trung vào xử lý và khởi tạo hình ảnh bằng AI, đồ họa 3D tương tác trên trình duyệt (Three.js/WebGL), giao diện tương tác người dùng trực quan trên nền tảng AI Khác, viết bằng TypeScript. Nội dung gốc: AI-first Native 3D, CAD & spatial computing. Runtime and JIT compiler for Android (Filament & Jetpack XR), iOS/visionOS (RealityKit), and WebGL2/WebXR.
+3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.7k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+4. **[melonjs/melonJS](https://github.com/melonjs/melonJS)** (🟣 AI Khác | ⭐ 6.5k): một công cụ trò chơi HTML5 hiện đại và nhẹ. (Dự án melonJS của melonjs, phát triển bằng JavaScript).
+5. **[invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)** (🟣 AI Khác | ⭐ 29.1k): Invoke là công cụ sáng tạo hàng đầu dành cho các mô hình Khuếch tán ổn định, trao quyền cho các chuyên gia, nghệ sĩ và những người đam mê tạo ra và tạo ra phương tiện trực quan bằng cách sử dụng các công nghệ điều khiển AI mới nhất. Giải pháp này cung cấp WebUI hàng đầu trong ngành và đóng vai trò là nền tảng cho nhiều sản phẩm thương mại. (Dự án InvokeAI của invoke-ai, phát triển bằng TypeScript).
 
 ---
-👉 *Xem toàn bộ 3855 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 3951 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
