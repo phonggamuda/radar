@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-11 02:22:42` (Phát hiện mới: **96** kho | Đang tăng sao: **352** kho).
-- **Tổng số kho mã nguồn tích lũy:** **3951 kho**.
+- **Thời gian cập nhật:** `2026-11-12 03:30:38` (Phát hiện mới: **102** kho | Đang tăng sao: **362** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4053 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **331** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **936** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **151** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2533** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **342** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **959** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **153** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2599** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 176.8k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[google/three-live](https://github.com/google/three-live)** (🟣 AI Khác | ⭐ 311): Dự án 'three live' (bởi google) tập trung vào xử lý và khởi tạo hình ảnh bằng AI, đồ họa 3D tương tác trên trình duyệt (Three.js/WebGL), giao diện tương tác người dùng trực quan trên nền tảng AI Khác, viết bằng TypeScript. Nội dung gốc: AI-first Native 3D, CAD & spatial computing. Runtime and JIT compiler for Android (Filament & Jetpack XR), iOS/visionOS (RealityKit), and WebGL2/WebXR.
-3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.7k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-4. **[melonjs/melonJS](https://github.com/melonjs/melonJS)** (🟣 AI Khác | ⭐ 6.5k): một công cụ trò chơi HTML5 hiện đại và nhẹ. (Dự án melonJS của melonjs, phát triển bằng JavaScript).
-5. **[invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)** (🟣 AI Khác | ⭐ 29.1k): Invoke là công cụ sáng tạo hàng đầu dành cho các mô hình Khuếch tán ổn định, trao quyền cho các chuyên gia, nghệ sĩ và những người đam mê tạo ra và tạo ra phương tiện trực quan bằng cách sử dụng các công nghệ điều khiển AI mới nhất. Giải pháp này cung cấp WebUI hàng đầu trong ngành và đóng vai trò là nền tảng cho nhiều sản phẩm thương mại. (Dự án InvokeAI của invoke-ai, phát triển bằng TypeScript).
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 176.9k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.7k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+3. **[duriantaco/skylos](https://github.com/duriantaco/skylos)** (🟣 AI Khác | ⭐ 935): Dự án 'skylos' (bởi duriantaco) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Open source local-first PR scanner that finds dead code, security bugs, secrets, quality regressions, and AI-code mistakes before merge. For first timers refer to https://duriantac
+4. **[Shilo/PixelDoll](https://github.com/Shilo/PixelDoll)** (🟣 AI Khác | ⭐ 32): Trang điểm cho các nhân vật trong trò chơi 2D của bạn bằng búp bê giấy hoàn hảo đến từng pixel. Tạo các lớp thiết bị có thể thay đổi, căn chỉnh theo khung bằng PixelLab AI và xuất chúng sang bất kỳ công cụ phát triển trò chơi nào. https://pixeldoll.app https://shilo.github.io/PixelDoll. (Dự án PixelDoll của Shilo, phát triển bằng TypeScript).
+5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.2k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
 
 ---
-👉 *Xem toàn bộ 3951 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4053 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
