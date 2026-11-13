@@ -14,36 +14,36 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-12 03:30:38` (Phát hiện mới: **102** kho | Đang tăng sao: **362** kho).
-- **Tổng số kho mã nguồn tích lũy:** **4053 kho**.
+- **Thời gian cập nhật:** `2026-11-13 03:04:23` (Phát hiện mới: **100** kho | Đang tăng sao: **360** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4153 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **342** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **959** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **153** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2599** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **350** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **987** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **158** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2658** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
 ## 🚀 TOP CÔNG CỤ TĂNG SAO ĐỘT BIẾN ĐÁNG QUAN TÂM
-1. **[sindresorhus/awesome](https://github.com/sindresorhus/awesome)** — ⭐ `0` ➔ **`522,368`** (**🚀 +522,368 sao / +100.0%**): S sindresorhus / awesome Một danh sách tổng hợp các danh sách được tuyển chọn được sắp xếp theo miền công nghệ. Kho lưu trữ hoạt động như một thư mục trỏ đến hàng trăm danh sách chuyên biệt tuyệt vời bao gồm các ngôn ngữ lập trình, nền tảng, khung và công cụ. Tất cả.
-2. **[public-apis/public-apis](https://github.com/public-apis/public-apis)** — ⭐ `0` ➔ **`491,123`** (**🚀 +491,123 sao / +100.0%**): P public-apis / public-apis Public API là kho lưu trữ GitHub do cộng đồng quản lý liệt kê các API miễn phí, có thể truy cập công khai trên nhiều danh mục, với loại xác thực, HTTPS và CORS được ghi chú cho mỗi mục nhập. Đó là một tài liệu tham khảo có thể duyệt được, không phải là một thư viện.
-3. **[freecodecamp/freecodecamp](https://github.com/freecodecamp/freecodecamp)** — ⭐ `0` ➔ **`457,644`** (**🚀 +457,644 sao / +100.0%**): F freeCodeCamp / freeCodeCamp freeCodeCamp là một chương trình giảng dạy miễn phí, theo nhịp độ riêng để học viết mã, được xuất bản dưới dạng nguồn mở tại freeCodeCamp/freeCodeCamp. Đó là một tổ chức phi lợi nhuận 501(c)(3) được tài trợ bởi sự hỗ trợ của nhà tài trợ, được cấu trúc dựa trên sáu chứng chỉ trong F.
-4. **[ebookfoundation/free-programming-books](https://github.com/ebookfoundation/free-programming-books)** — ⭐ `0` ➔ **`399,746`** (**🚀 +399,746 sao / +100.0%**): Kho mã nguồn mở ebookfoundation/free-programming-books cung cấp giải pháp lập trình và tự động hóa tác vụ cho nhà phát triển.
-5. **[donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)** — ⭐ `0` ➔ **`375,045`** (**🚀 +375,045 sao / +100.0%**): D donnemartin / system-design-primer System Design Primer là bộ sưu tập GitHub của donnemartin để học thiết kế hệ thống quy mô lớn và chuẩn bị cho cuộc phỏng vấn thiết kế hệ thống. Nó kết hợp những người giải thích chủ đề, một khuôn khổ phỏng vấn bốn bước, công việc.
-6. **[nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)** — ⭐ `0` ➔ **`370,064`** (**🚀 +370,064 sao / +100.0%**): N nilbuild / lộ trình lộ trình dành cho nhà phát triển.sh là một tập hợp mã nguồn mở gồm các lộ trình học tập dựa trên vai trò và kỹ năng được duy trì trên GitHub dưới dạng nilbuild/lộ trình dành cho nhà phát triển. Mỗi lộ trình hiển thị dưới dạng sơ đồ tương tác có các nút liên kết với một điểm đánh dấu ngắn.
-7. **[jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university)** — ⭐ `0` ➔ **`363,214`** (**🚀 +363,214 sao / +100.0%**): J jwasham / đại học mã hóa-phỏng vấn-Đại học Phỏng vấn mã hóa là một kho lưu trữ GitHub được duy trì dưới tài khoản jwasham cung cấp kế hoạch nghiên cứu dựa trên danh sách kiểm tra cho các nguyên tắc cơ bản về khoa học máy tính và các bài kiểm tra phỏng vấn kỹ thuật phần mềm. TÔI.
-8. **[vinta/awesome-python](https://github.com/vinta/awesome-python)** — ⭐ `0` ➔ **`329,263`** (**🚀 +329,263 sao / +100.0%**): V vinta / awesome-python Awesome Python là một danh sách tuyển chọn được duy trì tại vinta/awesome-python, nhóm các khung, thư viện, công cụ và tài nguyên khác của Python thành 14 danh mục, từ AI & ML đến Bảo mật và Khác. README gọi đó là ý kiến.
+1. **[morluto/rea](https://github.com/morluto/rea)** — ⭐ `290,448` ➔ **`372,992`** (**🚀 +82,544 sao / +28.4%**): 1 morluto/rea ★ 27,6k +6,5k/ngày.
+2. **[debpalash/voicestudio](https://github.com/debpalash/voicestudio)** — ⭐ `78,916` ➔ **`101,882`** (**🚀 +22,966 sao / +29.1%**): 14 V debpalash / VoiceStudio ✓ VoiceStudio đã được đánh giá là giải pháp thay thế ElevenLabs mã nguồn mở, hoàn toàn cục bộ — nhân bản giọng nói, thiết kế giọng nói, lồng tiếng video, đọc chính tả, chép lời và tạo sách nói bằng 646 ngôn ngữ. 24,5k Python Cũng hôm nay Đọc revi.
+3. **[pingdotgg/t3code](https://github.com/pingdotgg/t3code)** — ⭐ `28,858` ➔ **`48,275`** (**🚀 +19,417 sao / +67.3%**): 9 T pingdotgg / t3code ✓ Đã đánh giá 26,4k TypeScript · Điện thoại di động Đọc đánh giá →.
+4. **[sindresorhus/awesome](https://github.com/sindresorhus/awesome)** — ⭐ `522,368` ➔ **`536,005`** (**🚀 +13,637 sao / +2.6%**): S sindresorhus / awesome Một danh sách tổng hợp các danh sách được tuyển chọn được sắp xếp theo miền công nghệ. Kho lưu trữ hoạt động như một thư mục trỏ đến hàng trăm danh sách chuyên biệt tuyệt vời bao gồm các ngôn ngữ lập trình, nền tảng, khung và công cụ. Tất cả.
+5. **[mattpocock/skills](https://github.com/mattpocock/skills)** — ⭐ `294,053` ➔ **`301,788`** (**🚀 +7,735 sao / +2.6%**): 3 mattpocock / kỹ năng ★ 281,2k +1,5k/d.
+6. **[boykopovar/anyps5](https://github.com/boykopovar/anyps5)** — ⭐ `39,875` ➔ **`47,368`** (**🚀 +7,493 sao / +18.8%**): 2 boykopovar / AnyPS5 ★ 16,0k +4,1k/ngày.
+7. **[awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)** — ⭐ `329,035` ➔ **`336,497`** (**🚀 +7,462 sao / +2.3%**): Awesome-selfhosted / awesome-selfhosted Awesome-Selfhosted là một danh sách GitHub do cộng đồng duy trì tại awesome-selfhosted/awesome-selfhosted liệt kê các dự án ứng dụng web và dịch vụ mạng Phần mềm miễn phí dành cho chạy trên máy chủ mà bạn kiểm soát chuột.
+8. **[public-apis/public-apis](https://github.com/public-apis/public-apis)** — ⭐ `491,123` ➔ **`498,558`** (**🚀 +7,435 sao / +1.5%**): P public-apis / public-apis Public API là kho lưu trữ GitHub do cộng đồng quản lý liệt kê các API miễn phí, có thể truy cập công khai trên nhiều danh mục, với loại xác thực, HTTPS và CORS được ghi chú cho mỗi mục nhập. Đó là một tài liệu tham khảo có thể duyệt được, không phải là một thư viện.
 
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 176.9k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.7k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-3. **[duriantaco/skylos](https://github.com/duriantaco/skylos)** (🟣 AI Khác | ⭐ 935): Dự án 'skylos' (bởi duriantaco) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Open source local-first PR scanner that finds dead code, security bugs, secrets, quality regressions, and AI-code mistakes before merge. For first timers refer to https://duriantac
-4. **[Shilo/PixelDoll](https://github.com/Shilo/PixelDoll)** (🟣 AI Khác | ⭐ 32): Trang điểm cho các nhân vật trong trò chơi 2D của bạn bằng búp bê giấy hoàn hảo đến từng pixel. Tạo các lớp thiết bị có thể thay đổi, căn chỉnh theo khung bằng PixelLab AI và xuất chúng sang bất kỳ công cụ phát triển trò chơi nào. https://pixeldoll.app https://shilo.github.io/PixelDoll. (Dự án PixelDoll của Shilo, phát triển bằng TypeScript).
-5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.2k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.0k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks)** (🟢 OpenAI | ⭐ 71.3k): Dự án 'system prompts leaks' (bởi asgeirtj) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, chatbot tự động tích hợp nền tảng nhắn tin, truy xuất tri thức từ tài liệu (RAG) trên nền tảng OpenAI / ChatGPT, viết bằng Python. Nội dung gốc: Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigrav
+3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.8k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+4. **[jjohn150296/yari-zan-launcher](https://github.com/jjohn150296/yari-zan-launcher)** (🟣 AI Khác | ⭐ 102): Dự án 'yari zan launcher' (bởi jjohn150296) tập trung vào trò chơi giải trí/giáo dục tương tác trên nền tảng Tiện ích / Game, viết bằng TypeScript. Nội dung gốc: YariZan: Persian Educational Mini-Game Launcher for Grades 1-6
+5. **[Alex-D-C/SiliCoDraw](https://github.com/Alex-D-C/SiliCoDraw)** (🟣 AI Khác | ⭐ 84): Dự án 'SiliCoDraw' (bởi Alex-D-C) tập trung vào xử lý và khởi tạo hình ảnh bằng AI, hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng HTML. Nội dung gốc: Draw scientific figures in silico, together with your AI assistant.    Vibe code project for a free figure editor for for scientific figures and graphical abstracts, that you can r
 
 ---
-👉 *Xem toàn bộ 4053 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4153 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
