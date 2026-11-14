@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-13 03:04:23` (Phát hiện mới: **100** kho | Đang tăng sao: **360** kho).
-- **Tổng số kho mã nguồn tích lũy:** **4153 kho**.
+- **Thời gian cập nhật:** `2026-11-14 02:51:48` (Phát hiện mới: **123** kho | Đang tăng sao: **363** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4276 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **350** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **987** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **158** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2658** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **362** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1017** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **162** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2735** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.0k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks)** (🟢 OpenAI | ⭐ 71.3k): Dự án 'system prompts leaks' (bởi asgeirtj) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, chatbot tự động tích hợp nền tảng nhắn tin, truy xuất tri thức từ tài liệu (RAG) trên nền tảng OpenAI / ChatGPT, viết bằng Python. Nội dung gốc: Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigrav
-3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.8k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-4. **[jjohn150296/yari-zan-launcher](https://github.com/jjohn150296/yari-zan-launcher)** (🟣 AI Khác | ⭐ 102): Dự án 'yari zan launcher' (bởi jjohn150296) tập trung vào trò chơi giải trí/giáo dục tương tác trên nền tảng Tiện ích / Game, viết bằng TypeScript. Nội dung gốc: YariZan: Persian Educational Mini-Game Launcher for Grades 1-6
-5. **[Alex-D-C/SiliCoDraw](https://github.com/Alex-D-C/SiliCoDraw)** (🟣 AI Khác | ⭐ 84): Dự án 'SiliCoDraw' (bởi Alex-D-C) tập trung vào xử lý và khởi tạo hình ảnh bằng AI, hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng HTML. Nội dung gốc: Draw scientific figures in silico, together with your AI assistant.    Vibe code project for a free figure editor for for scientific figures and graphical abstracts, that you can r
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.1k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.8k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+3. **[NoeFabris/opencode-antigravity-auth](https://github.com/NoeFabris/opencode-antigravity-auth)** (🔵 Gemini | ⭐ 11.0k): Dự án 'opencode antigravity auth' (bởi NoeFabris) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: Enable Opencode to authenticate against Antigravity (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like gemini-3-pro and claude-opus-4-5-thinking
+4. **[GoogleCloudPlatform/generative-ai](https://github.com/GoogleCloudPlatform/generative-ai)** (🔵 Gemini | ⭐ 17.9k): Dự án 'generative ai' (bởi GoogleCloudPlatform) tập trung vào tác nhân AI tự hành (AI Agent) xử lý đa tác vụ, hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng Google Gemini, viết bằng Jupyter Notebook. Nội dung gốc: Sample code and notebooks for Generative AI on Google Cloud, with Gemini Enterprise Agent Platform
+5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.2k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
 
 ---
-👉 *Xem toàn bộ 4153 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4276 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
