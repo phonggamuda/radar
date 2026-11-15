@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-14 02:51:48` (Phát hiện mới: **123** kho | Đang tăng sao: **363** kho).
-- **Tổng số kho mã nguồn tích lũy:** **4276 kho**.
+- **Thời gian cập nhật:** `2026-11-15 02:19:24` (Phát hiện mới: **128** kho | Đang tăng sao: **370** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4404 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **362** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1017** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **162** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2735** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **367** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1039** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **164** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2834** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.1k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.8k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-3. **[NoeFabris/opencode-antigravity-auth](https://github.com/NoeFabris/opencode-antigravity-auth)** (🔵 Gemini | ⭐ 11.0k): Dự án 'opencode antigravity auth' (bởi NoeFabris) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: Enable Opencode to authenticate against Antigravity (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like gemini-3-pro and claude-opus-4-5-thinking
-4. **[GoogleCloudPlatform/generative-ai](https://github.com/GoogleCloudPlatform/generative-ai)** (🔵 Gemini | ⭐ 17.9k): Dự án 'generative ai' (bởi GoogleCloudPlatform) tập trung vào tác nhân AI tự hành (AI Agent) xử lý đa tác vụ, hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng Google Gemini, viết bằng Jupyter Notebook. Nội dung gốc: Sample code and notebooks for Generative AI on Google Cloud, with Gemini Enterprise Agent Platform
-5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.2k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
+1. **[jjohn150296/yari-zan-launcher](https://github.com/jjohn150296/yari-zan-launcher)** (🟣 AI Khác | ⭐ 102): Dự án 'yari zan launcher' (bởi jjohn150296) tập trung vào trò chơi giải trí/giáo dục tương tác trên nền tảng Tiện ích / Game, viết bằng TypeScript. Nội dung gốc: YariZan: Persian Educational Mini-Game Launcher for Grades 1-6
+2. **[fengyiqicoder/awesome-fable-5.2](https://github.com/fengyiqicoder/awesome-fable-5.2)** (🟠 Claude | ⭐ 288): Trò chơi, thế giới 3D và các trang web được xây dựng bằng Claude Fable 5.2 mà bạn thực sự có thể mở - 151 tác phẩm trực tiếp (mỗi liên kết đã được kiểm tra) + 111 bản demo video, mỗi bản có bản xem trước GIF và tín dụng của người sáng tạo. Cập nhật hàng ngày. (Dự án awesome fable 5.2 của fengyiqicoder, phát triển bằng Other).
+3. **[walkskysu/digital-human-koubo-comfyui](https://github.com/walkskysu/digital-human-koubo-comfyui)** (🟢 OpenAI | ⭐ 31): Tạo chương trình phát giọng nói kỹ thuật số AI từ một bức ảnh: toàn bộ quá trình ComfyUI cục bộ (âm thanh nhân bản Qwen3-TTS + hát nhép MiniMax H3 + Hình ảnh Qwen + Nhạc 3), không tốn điểm; 5 kiểu chỉnh sửa + 48 thành phần đóng gói cấp độ blogger. Các video có đầu người biết nói kỹ thuật số AI từ một bức ảnh, được tạo cục bộ bằng ComfyUI (đồng bộ hóa môi Qwen3-TTS + MiniMax H3), không có phần ghi công. Kỹ năng đại diện cho Claude Code/Codex/OpenClaw/WorkBuddy…. (Dự án digital human koubo comfyui của walkskysu, phát triển bằng TypeScript).
+4. **[msveshnikov/claude-game-pipeline](https://github.com/msveshnikov/claude-game-pipeline)** (🟢 OpenAI | ⭐ 31): Plugin Claude Code: tạo trò chơi 3D từ nghệ thuật khái niệm ChatGPT -> Blender (Python) -> Godot 4 -> vận chuyển các bản dựng Windows/Web/Android. (Dự án claude game pipeline của msveshnikov, phát triển bằng Python).
+5. **[Draculabo/AntigravityManager](https://github.com/Draculabo/AntigravityManager)** (🟢 OpenAI | ⭐ 2.5k): Trình quản lý lực hấp dẫn là một ứng dụng dành cho máy tính để bàn để quản lý các tài khoản Google được khách hàng AntiGravity sử dụng (bao gồm Classic, AntiGravity IDE và agy CLI). Xem hạn ngạch mô hình trong thời gian thực, chuyển đổi tài khoản khách hàng một cách liền mạch và kết nối các công cụ mã hóa AI như Claude Code, Codex và OpenCode thông qua cổng API cục bộ hiệu suất cao. (Dự án AntigravityManager của Draculabo, phát triển bằng TypeScript).
 
 ---
-👉 *Xem toàn bộ 4276 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4404 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
