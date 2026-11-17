@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-16 02:31:42` (Phát hiện mới: **136** kho | Đang tăng sao: **373** kho).
-- **Tổng số kho mã nguồn tích lũy:** **4540 kho**.
+- **Thời gian cập nhật:** `2026-11-17 04:55:21` (Phát hiện mới: **118** kho | Đang tăng sao: **371** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4658 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **376** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1063** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **167** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **2934** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **383** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1091** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **168** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3016** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[walkskysu/digital-human-koubo-comfyui](https://github.com/walkskysu/digital-human-koubo-comfyui)** (🟢 OpenAI | ⭐ 34): Tạo chương trình phát giọng nói kỹ thuật số AI từ một bức ảnh: toàn bộ quá trình ComfyUI cục bộ (âm thanh nhân bản Qwen3-TTS + hát nhép MiniMax H3 + Hình ảnh Qwen + Nhạc 3), không tốn điểm; 5 kiểu chỉnh sửa + 48 thành phần đóng gói cấp độ blogger. Các video có đầu người biết nói kỹ thuật số AI từ một bức ảnh, được tạo cục bộ bằng ComfyUI (đồng bộ hóa môi Qwen3-TTS + MiniMax H3), không có phần ghi công. Kỹ năng đại diện cho Claude Code/Codex/OpenClaw/WorkBuddy…. (Dự án digital human koubo comfyui của walkskysu, phát triển bằng TypeScript).
-2. **[msveshnikov/claude-game-pipeline](https://github.com/msveshnikov/claude-game-pipeline)** (🟢 OpenAI | ⭐ 36): Plugin Claude Code: tạo trò chơi 3D từ nghệ thuật khái niệm ChatGPT -> Blender (Python) -> Godot 4 -> vận chuyển các bản dựng Windows/Web/Android. (Dự án claude game pipeline của msveshnikov, phát triển bằng Python).
-3. **[melonjs/melonJS](https://github.com/melonjs/melonJS)** (🟣 AI Khác | ⭐ 6.5k): một công cụ trò chơi HTML5 hiện đại và nhẹ. (Dự án melonJS của melonjs, phát triển bằng JavaScript).
-4. **[YouMind-OpenLab/awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts)** (🔵 Gemini | ⭐ 13.8k): Dự án 'awesome nano banana pro prompts' (bởi YouMind-OpenLab) tập trung vào bộ sưu tập câu lệnh (prompts) chuyên dụng, xử lý và khởi tạo hình ảnh bằng AI, danh sách tổng hợp tài nguyên và công cụ chọn lọc trên nền tảng Google Gemini, viết bằng TypeScript. Nội dung gốc: 🍌 World's largest Nano Banana Pro prompt library — 10,000+ curated prompts with preview images, 16 languages. Google Gemini AI image generation. Free & open source.
-5. **[liyupi/awesome-vibe-coding-websites](https://github.com/liyupi/awesome-vibe-coding-websites)** (🟢 OpenAI | ⭐ 17): Hơn 500 trang web gốc được xây dựng bởi các tác nhân mã hóa AI - Claude, GPT, Gemini, Grok, Kimi, GLM, DeepSeek. Bản trình diễn trực tiếp, lời nhắc sao chép-dán và DESIGN.md cho Mã Claude, Con trỏ và Codex. Mẫu website mã hóa Vibe, được cập nhật theo từng mẫu mới. (Dự án awesome vibe coding websites của liyupi, phát triển bằng Other).
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.7k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[luoyangdekai/chatgpt-plus-pro-Recharge-China](https://github.com/luoyangdekai/chatgpt-plus-pro-Recharge-China)** (🟢 OpenAI | ⭐ 576): Dự án 'chatgpt plus pro Recharge China' (bởi luoyangdekai) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng OpenAI / ChatGPT, viết bằng Other. Nội dung gốc: 2026年10月 全网最简 |  ChatGPT/Codex 充值/代充指南 | Plus 135， Pro100 650， Pro 200 1140元，支付宝/微信支付，1分钟极速到账，官方订阅・账单可查 | 附 Grok/Gemini/Claude充值/代充                                                 
+3. **[Tavotto/Tavotto](https://github.com/Tavotto/Tavotto)** (🟣 AI Khác | ⭐ 714): Làm cho các số liệu khoa học do AI tạo ra có thể chỉnh sửa được mà không làm mất mã đằng sau chúng. (Dự án Tavotto của Tavotto, phát triển bằng Python).
+4. **[invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)** (🟣 AI Khác | ⭐ 29.1k): Invoke là công cụ sáng tạo hàng đầu dành cho các mô hình Khuếch tán ổn định, trao quyền cho các chuyên gia, nghệ sĩ và những người đam mê tạo ra và tạo ra phương tiện trực quan bằng cách sử dụng các công nghệ điều khiển AI mới nhất. Giải pháp này cung cấp WebUI hàng đầu trong ngành và đóng vai trò là nền tảng cho nhiều sản phẩm thương mại. (Dự án InvokeAI của invoke-ai, phát triển bằng TypeScript).
+5. **[msveshnikov/claude-game-pipeline](https://github.com/msveshnikov/claude-game-pipeline)** (🟢 OpenAI | ⭐ 38): Plugin Claude Code: tạo trò chơi 3D từ nghệ thuật khái niệm ChatGPT -> Blender (Python) -> Godot 4 -> vận chuyển các bản dựng Windows/Web/Android. (Dự án claude game pipeline của msveshnikov, phát triển bằng Python).
 
 ---
-👉 *Xem toàn bộ 4540 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4658 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
