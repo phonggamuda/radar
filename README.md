@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-17 04:55:21` (Phát hiện mới: **118** kho | Đang tăng sao: **371** kho).
-- **Tổng số kho mã nguồn tích lũy:** **4658 kho**.
+- **Thời gian cập nhật:** `2026-11-18 04:01:41` (Phát hiện mới: **123** kho | Đang tăng sao: **378** kho).
+- **Tổng số kho mã nguồn tích lũy:** **4781 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **383** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1091** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **168** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3016** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **391** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1120** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **171** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3099** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.7k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-2. **[luoyangdekai/chatgpt-plus-pro-Recharge-China](https://github.com/luoyangdekai/chatgpt-plus-pro-Recharge-China)** (🟢 OpenAI | ⭐ 576): Dự án 'chatgpt plus pro Recharge China' (bởi luoyangdekai) tập trung vào hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng OpenAI / ChatGPT, viết bằng Other. Nội dung gốc: 2026年10月 全网最简 |  ChatGPT/Codex 充值/代充指南 | Plus 135， Pro100 650， Pro 200 1140元，支付宝/微信支付，1分钟极速到账，官方订阅・账单可查 | 附 Grok/Gemini/Claude充值/代充                                                 
-3. **[Tavotto/Tavotto](https://github.com/Tavotto/Tavotto)** (🟣 AI Khác | ⭐ 714): Làm cho các số liệu khoa học do AI tạo ra có thể chỉnh sửa được mà không làm mất mã đằng sau chúng. (Dự án Tavotto của Tavotto, phát triển bằng Python).
-4. **[invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)** (🟣 AI Khác | ⭐ 29.1k): Invoke là công cụ sáng tạo hàng đầu dành cho các mô hình Khuếch tán ổn định, trao quyền cho các chuyên gia, nghệ sĩ và những người đam mê tạo ra và tạo ra phương tiện trực quan bằng cách sử dụng các công nghệ điều khiển AI mới nhất. Giải pháp này cung cấp WebUI hàng đầu trong ngành và đóng vai trò là nền tảng cho nhiều sản phẩm thương mại. (Dự án InvokeAI của invoke-ai, phát triển bằng TypeScript).
-5. **[msveshnikov/claude-game-pipeline](https://github.com/msveshnikov/claude-game-pipeline)** (🟢 OpenAI | ⭐ 38): Plugin Claude Code: tạo trò chơi 3D từ nghệ thuật khái niệm ChatGPT -> Blender (Python) -> Godot 4 -> vận chuyển các bản dựng Windows/Web/Android. (Dự án claude game pipeline của msveshnikov, phát triển bằng Python).
+1. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 10.3k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
+2. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.8k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 35.9k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
+4. **[ModelEngine-Group/nexent](https://github.com/ModelEngine-Group/nexent)** (🟣 AI Khác | ⭐ 6.2k): Nexent là nền tảng không mã để tự động tạo các tác nhân AI cấp sản xuất bằng cách sử dụng các nguyên tắc Kỹ thuật khai thác — các công cụ, kỹ năng, bộ nhớ và điều phối hợp nhất với các ràng buộc, vòng phản hồi và mặt phẳng điều khiển tích hợp sẵn. (Dự án nexent của ModelEngine-Group, phát triển bằng Python).
+5. **[ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts)** (🟢 OpenAI | ⭐ 9.3k): Danh sách lời nhắc chatgpt được tuyển chọn từ các GPT được xếp hạng hàng đầu trong GPTs Store. Kỹ thuật nhanh chóng, tấn công nhanh chóng và bảo vệ nhanh chóng. Tài liệu Kỹ thuật nhanh chóng nâng cao. (Dự án awesome prompts của ai-boost, phát triển bằng Other).
 
 ---
-👉 *Xem toàn bộ 4658 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 4781 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
