@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-20 03:51:19` (Phát hiện mới: **110** kho | Đang tăng sao: **392** kho).
-- **Tổng số kho mã nguồn tích lũy:** **5000 kho**.
+- **Thời gian cập nhật:** `2026-11-21 03:41:23` (Phát hiện mới: **98** kho | Đang tăng sao: **398** kho).
+- **Tổng số kho mã nguồn tích lũy:** **5098 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **403** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1174** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **178** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3245** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **411** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1202** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **182** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3303** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 11.1k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
-2. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 177.9k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-3. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 36.0k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-4. **[fengyiqicoder/awesome-fable-5.2](https://github.com/fengyiqicoder/awesome-fable-5.2)** (🟠 Claude | ⭐ 475): Trò chơi, thế giới 3D và các trang web được xây dựng bằng Claude Fable 5.2 mà bạn thực sự có thể mở - 151 tác phẩm trực tiếp (mỗi liên kết đã được kiểm tra) + 111 bản demo video, mỗi bản có bản xem trước GIF và tín dụng của người sáng tạo. Cập nhật hàng ngày. (Dự án awesome fable 5.2 của fengyiqicoder, phát triển bằng Other).
-5. **[reticlehq/reticle](https://github.com/reticlehq/reticle)** (🟣 AI Khác | ⭐ 1.3k): Dự án 'reticle' (bởi reticlehq) tập trung vào tác nhân AI tự hành (AI Agent) xử lý đa tác vụ, hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng AI Khác, viết bằng TypeScript. Nội dung gốc: AI agents can generate code, but still struggle to understand what they build. Reticle brings Jev-style machine-native runtime perception to web & desktop applications.
+1. **[miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop)** (🟣 AI Khác | ⭐ 9.7k): Dự án 'anti slop' (bởi miqdadbadjuber) tập trung vào tác nhân AI tự hành (AI Agent) xử lý đa tác vụ, hỗ trợ lập trình và sinh mã nguồn tự động, giao diện tương tác người dùng trực quan trên nền tảng AI Khác, viết bằng JavaScript. Nội dung gốc: Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.
+2. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 11.5k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
+3. **[Mag1cFall/AIStudio2API](https://github.com/Mag1cFall/AIStudio2API)** (🟢 OpenAI | ⭐ 1.1k): Dự án 'AIStudio2API' (bởi Mag1cFall) tập trung vào trò chơi giải trí/giáo dục tương tác, giao diện tương tác người dùng trực quan trên nền tảng OpenAI / ChatGPT, viết bằng Go. Nội dung gốc: 将AI Studio Playground和Build反代成API | AI Studio to OpenAI, Anthropic & Gemini Compatible API
+4. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 178.1k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+5. **[fengyiqicoder/awesome-fable-5.2](https://github.com/fengyiqicoder/awesome-fable-5.2)** (🟠 Claude | ⭐ 506): Trò chơi, thế giới 3D và các trang web được xây dựng bằng Claude Fable 5.2 mà bạn thực sự có thể mở - 151 tác phẩm trực tiếp (mỗi liên kết đã được kiểm tra) + 111 bản demo video, mỗi bản có bản xem trước GIF và tín dụng của người sáng tạo. Cập nhật hàng ngày. (Dự án awesome fable 5.2 của fengyiqicoder, phát triển bằng Other).
 
 ---
-👉 *Xem toàn bộ 5000 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 5098 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
