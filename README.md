@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-23 03:22:47` (Phát hiện mới: **116** kho | Đang tăng sao: **406** kho).
-- **Tổng số kho mã nguồn tích lũy:** **5312 kho**.
+- **Thời gian cập nhật:** `2026-11-24 06:36:47` (Phát hiện mới: **131** kho | Đang tăng sao: **413** kho).
+- **Tổng số kho mã nguồn tích lũy:** **5443 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **427** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1248** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **185** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3452** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **439** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1282** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **188** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3534** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 12.3k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
+1. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 12.8k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
 2. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 178.3k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-3. **[liyupi/awesome-vibe-coding-websites](https://github.com/liyupi/awesome-vibe-coding-websites)** (🟢 OpenAI | ⭐ 109): Hơn 500 trang web gốc được xây dựng bởi các tác nhân mã hóa AI - Claude, GPT, Gemini, Grok, Kimi, GLM, DeepSeek. Bản trình diễn trực tiếp, lời nhắc sao chép-dán và DESIGN.md cho Mã Claude, Con trỏ và Codex. Mẫu website mã hóa Vibe, được cập nhật theo từng mẫu mới. (Dự án awesome vibe coding websites của liyupi, phát triển bằng Other).
+3. **[liyupi/awesome-vibe-coding-websites](https://github.com/liyupi/awesome-vibe-coding-websites)** (🟢 OpenAI | ⭐ 183): Hơn 500 trang web gốc được xây dựng bởi các tác nhân mã hóa AI - Claude, GPT, Gemini, Grok, Kimi, GLM, DeepSeek. Bản trình diễn trực tiếp, lời nhắc sao chép-dán và DESIGN.md cho Mã Claude, Con trỏ và Codex. Mẫu website mã hóa Vibe, được cập nhật theo từng mẫu mới. (Dự án awesome vibe coding websites của liyupi, phát triển bằng Other).
 4. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 36.1k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-5. **[google/langextract](https://github.com/google/langextract)** (🔵 Gemini | ⭐ 39.3k): Dự án 'langextract' (bởi google) tập trung vào ứng dụng thuộc chuyên mục GitHub: Google Gemini Pro trên nền tảng Google Gemini, viết bằng Python. Nội dung gốc: A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.
+5. **[google/langextract](https://github.com/google/langextract)** (🔵 Gemini | ⭐ 39.4k): Dự án 'langextract' (bởi google) tập trung vào ứng dụng thuộc chuyên mục GitHub: Google Gemini Pro trên nền tảng Google Gemini, viết bằng Python. Nội dung gốc: A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.
 
 ---
-👉 *Xem toàn bộ 5312 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 5443 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
