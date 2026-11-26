@@ -14,15 +14,15 @@
 ---
 
 ## 📊 THỐNG KÊ KHO DỮ LIỆU TÍCH LŨY
-- **Thời gian cập nhật:** `2026-11-25 05:12:28` (Phát hiện mới: **131** kho | Đang tăng sao: **415** kho).
-- **Tổng số kho mã nguồn tích lũy:** **5574 kho**.
+- **Thời gian cập nhật:** `2026-11-26 04:39:04` (Phát hiện mới: **123** kho | Đang tăng sao: **421** kho).
+- **Tổng số kho mã nguồn tích lũy:** **5697 kho**.
 
 | Hệ Sinh Thái AI | Độ Ưu Tiên | Số Lượng Repo | Ghi Chú |
 | :--- | :---: | :---: | :--- |
-| 🟢 **OpenAI / ChatGPT** | #1 | **451** | Game ChatGPT, Prompt Engineering, Plugin |
-| 🔵 **Google Gemini** | #2 | **1314** | Gemini Pro, Multimodal, SDK |
-| 🟠 **Anthropic Claude** | #3 | **191** | Claude Sonnet, Artifacts, MCP |
-| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3618** | Three.js 3D, Game HTML5, Sinh mã |
+| 🟢 **OpenAI / ChatGPT** | #1 | **457** | Game ChatGPT, Prompt Engineering, Plugin |
+| 🔵 **Google Gemini** | #2 | **1342** | Gemini Pro, Multimodal, SDK |
+| 🟠 **Anthropic Claude** | #3 | **194** | Claude Sonnet, Artifacts, MCP |
+| 🟣 **AI Khác & Tiện ích** | #4 / #5 | **3704** | Three.js 3D, Game HTML5, Sinh mã |
 
 ---
 
@@ -39,11 +39,11 @@
 ---
 
 ## 🔥 ĐIỂM TIN 5 KHO MỚI QUÉT GẦN NHẤT
-1. **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** (🟣 AI Khác | ⭐ 13.1k): Thiết kế ngược bất kỳ video nào, từng cảnh quay: được quay, do AI tạo hoặc mã hóa và cách làm lại video đó. Sự cố ở định dạng VIDEO.md mở. (Dự án rea video của JuneYaooo, phát triển bằng Python).
-2. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 178.5k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
-3. **[liyupi/awesome-vibe-coding-websites](https://github.com/liyupi/awesome-vibe-coding-websites)** (🟢 OpenAI | ⭐ 253): Hơn 500 trang web gốc được xây dựng bởi các tác nhân mã hóa AI - Claude, GPT, Gemini, Grok, Kimi, GLM, DeepSeek. Bản trình diễn trực tiếp, lời nhắc sao chép-dán và DESIGN.md cho Mã Claude, Con trỏ và Codex. Mẫu website mã hóa Vibe, được cập nhật theo từng mẫu mới. (Dự án awesome vibe coding websites của liyupi, phát triển bằng Other).
+1. **[f/prompts.chat](https://github.com/f/prompts.chat)** (🟢 OpenAI | ⭐ 178.5k): f.k.a. Lời nhắc ChatGPT tuyệt vời. Chia sẻ, khám phá và thu thập lời nhắc từ cộng đồng. Nguồn mở và miễn phí — tự lưu trữ cho tổ chức của bạn với sự riêng tư hoàn toàn. (Dự án prompts.chat của f, phát triển bằng HTML).
+2. **[liyupi/awesome-vibe-coding-websites](https://github.com/liyupi/awesome-vibe-coding-websites)** (🟢 OpenAI | ⭐ 313): Hơn 500 trang web gốc được xây dựng bởi các tác nhân mã hóa AI - Claude, GPT, Gemini, Grok, Kimi, GLM, DeepSeek. Bản trình diễn trực tiếp, lời nhắc sao chép-dán và DESIGN.md cho Mã Claude, Con trỏ và Codex. Mẫu website mã hóa Vibe, được cập nhật theo từng mẫu mới. (Dự án awesome vibe coding websites của liyupi, phát triển bằng Other).
+3. **[repowise-dev/repowise](https://github.com/repowise-dev/repowise)** (🟣 AI Khác | ⭐ 8.3k): Dự án 'repowise' (bởi repowise-dev) tập trung vào giao thức kết nối ngữ cảnh mô hình (MCP Server), truy xuất tri thức từ tài liệu (RAG), hỗ trợ lập trình và sinh mã nguồn tự động trên nền tảng AI Khác, viết bằng Python. Nội dung gốc: Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.
 4. **[freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)** (🟢 OpenAI | ⭐ 36.1k): Nhắc dưới dạng Mã | Thư viện trường hợp và từ nhắc GPT Image 2 / 2.5, hơn 530 trường hợp, hơn 20 bộ mẫu cấp công nghiệp và Kỹ năng có thể tái sử dụng, khu vực so sánh từ nhắc 2.5 mới, với các từ nhắc và bản ghi tạo hoàn chỉnh, được cập nhật liên tục. (Dự án awesome gpt image 2 của freestylefly, phát triển bằng JavaScript).
-5. **[ModelEngine-Group/nexent](https://github.com/ModelEngine-Group/nexent)** (🟣 AI Khác | ⭐ 6.3k): Nexent là nền tảng không mã để tự động tạo các tác nhân AI cấp sản xuất bằng cách sử dụng các nguyên tắc Kỹ thuật khai thác — các công cụ, kỹ năng, bộ nhớ và điều phối hợp nhất với các ràng buộc, vòng phản hồi và mặt phẳng điều khiển tích hợp sẵn. (Dự án nexent của ModelEngine-Group, phát triển bằng Python).
+5. **[sandbox-quantum/switch](https://github.com/sandbox-quantum/switch)** (🟢 OpenAI | ⭐ 4.8k): Các đồng đội AI nguồn mở trong Slack, Teams, Discord, Telegram và Matter Extreme. Mang theo Claude Code, Codex, Gemini (AntiGravity), Cursor, GitHub Copilot hoặc đại lý của riêng bạn trên bất kỳ mô hình nào và kết nối chúng với GitHub, Jira, Notion, Linear, Google Workspace, v.v. Điều phối đa tác nhân tự lưu trữ với MCP. (Dự án switch của sandbox-quantum, phát triển bằng Python).
 
 ---
-👉 *Xem toàn bộ 5574 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
+👉 *Xem toàn bộ 5697 kho mã nguồn đầy đủ tại: [https://phonggamuda.github.io/radar/](https://phonggamuda.github.io/radar/)*
